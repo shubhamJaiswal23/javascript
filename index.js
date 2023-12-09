@@ -1,21 +1,34 @@
-//Primitive Data-types stored in 'Stack' Location of memory.
-let name = 'john';
-console.log(name);
+//Type Conversion in JavaScript
 
-let newName = name;
-newName = 'shubham';
-console.log(newName);
+//String to Number Conversion
+// let num = '123';
 
-//Refence Type stored in the 'heap' location of the memory.
-const person = {
-  name: 'Brad',
-  age: 45
-};
+//1.) ParseInt();
+// num = parseInt(num);
+// console.log(num, typeof num);
 
-console.log(person);
+// num = num + 123;
+// console.log(num);
 
-let newPerson = person;
-newPerson.name = 'Sara';
+//2.) Number();
+// num = Number(num);
+// console.log(num, typeof num);
 
-console.log(newPerson);
-console.log(newPerson);
+//3.) + (unary operator)
+// num = +num;
+// console.log(num, typeof num);
+
+//4.) ParseFloat();
+// num = parseFloat(num);
+// console.log(num, typeof num);
+
+//Number to String Conversion in JavaScript
+
+let str = 123.445;
+//1.) toString() method
+// str = str.toString();
+// console.log(str, typeof str);
+
+//2.) String() contructor
+// str = String(str);
+// console.log(str, typeof str);
