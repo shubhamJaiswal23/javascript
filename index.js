@@ -1,34 +1,52 @@
-//Type Conversion in JavaScript
+//JavaScript Date() object
 
-//String to Number Conversion
-// let num = '123';
+//initialize new Date object
+let d = new Date();
 
-//1.) ParseInt();
-// num = parseInt(num);
-// console.log(num, typeof num);
+//using strings as an arguments in date object
+d = new Date('01/31/2000 09:30:00');
+// console.log(d);
 
-// num = num + 123;
-// console.log(num);
+d = new Date('01-31-2001 11:00:15');
+// console.log(d);
 
-//2.) Number();
-// num = Number(num);
-// console.log(num, typeof num);
+//using Numbers as an argumemts
+d = new Date(2023, 11, 9, 16, 30, 30);
+// console.log(d);
 
-//3.) + (unary operator)
-// num = +num;
-// console.log(num, typeof num);
+//TimeStamp:- number of milliseconds starting from 1st January 1970
+d = Date.now();
+// console.log(d);
 
-//4.) ParseFloat();
-// num = parseFloat(num);
-// console.log(num, typeof num);
+//get the timestamp to a specific date
+d = new Date('01-31-2000 11:00:00');
+// console.log(d.getTime());
+// console.log(d.valueOf());
 
-//Number to String Conversion in JavaScript
+//Usind DateTimeFormat API
+let y;
+d = new Date();
+// console.log(y);
 
-let str = 123.445;
-//1.) toString() method
-// str = str.toString();
-// console.log(str, typeof str);
+y = Intl.DateTimeFormat('default').format(d);
+// console.log(y);
 
-//2.) String() contructor
-// str = String(str);
-// console.log(str, typeof str);
+y = Intl.DateTimeFormat('en-GB').format(d);
+// console.log(y);
+
+y = Intl.DateTimeFormat('en-GB', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric'
+}).format(d);
+// console.log(y);
+
+//using Locale string Method to Date Object
+y = d.toLocaleString('en-GB', {
+  weekday: 'long',
+  day: 'numeric',
+  month: 'numeric',
+  year: 'numeric'
+});
+
+console.log(y);
