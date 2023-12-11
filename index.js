@@ -1,16 +1,25 @@
-//Destructuring of an Array
-//syntax -> const [values] = arrayName
+//Destructuring of an Object
+//syntax -> const {key} = object;
 
-const numbers = [1, 2, 3, 4, 5, 6, 7];
+const person = {
+  name: 'Shubham',
+  age: 23,
+  user: {
+    email: 'shubhamjaiswal@gmail.com'
+  }
+};
 
-const [one, two, , four, ...rest] = numbers;
+const { name, age: myAge } = person;
 
-console.log(one, two, four, rest);
+console.log(person);
 
-const max = Math.max(...numbers);
-console.log(max);
+console.log(name);
 
-const min = Math.min(...numbers);
-console.log(min);
+//Assign new name to age property
+console.log(myAge + 1);
 
-console.log(...numbers);
+const {
+  user: { email }
+} = person;
+
+console.log(email);
