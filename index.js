@@ -1,9 +1,10 @@
-//IIFE -> (Immediately Invoked function expressions)
-(function () {
-  console.log('Shubham Jaiswal');
-})();
+function person() {
+  const firstName = 'John';
+  function name() {
+    const lastName = 'Doe';
+    console.log(`${firstName} ${lastName}`);
+  }
+  name();
+}
 
-//Adding parameters to IIFE
-(function (name) {
-  console.log(`Hello, ${name}`);
-})('John Doe');
+person();
