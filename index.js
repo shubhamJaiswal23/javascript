@@ -1,23 +1,14 @@
-//functions in JavaScript
-//syntax -> function funcName (para1, para2, ...){
-// code to be executed
-//}
+//Arrow functions in JavaScript
+// Arrow functions allows a short syntax for writing { function expression }
 
-function sum(a, b) {
-  return a + b;
-}
+//Arrow functions with implicit return
+const sum = (num1, num2) => num1 + num2;
 
 console.log(sum(3, 4));
 
-//In order to get the output of a function we use the { return } keyword.
-
-//function expresssion in JavaScript
-const minus = function (num1, num2) {
-  return num1 - num2;
+//arrow function with explicit return
+const sum1 = (num1, num2) => {
+  return num1 + num2;
 };
 
-console.log(minus(3, 2));
-
-const minus1 = (num1, num2) => num1 - num2;
-
-console.log(minus1(4, 2));
+console.log(sum1(3, 4));
