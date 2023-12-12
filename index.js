@@ -1,31 +1,14 @@
-//Returning an Object with arrow function
+//ternary operator in JavaScript
+function voterAgeValidation(age) {
+  age = +age;
+  // if (age < 18) {
+  //   alert('You are not Eligible to Vote');
+  // } else {
+  //   alert('You are Eligible to Vote');
+  // }
+  age < 18
+    ? alert('You are not Eligible to Vote.')
+    : alert('You are Eligible to Vote');
+}
 
-//First Method
-const objReturn = () => {
-  return {
-    name: 'John Doe',
-    age: 40
-  };
-};
-
-console.log(objReturn());
-
-//Second Method
-const objReturn2 = () => ({ name: 'John Doe', age: 40 });
-
-console.log(objReturn2());
-
-//Third Method
-const objReturn3 = (name, age) => {
-  return {
-    name,
-    age
-  };
-};
-
-console.log(objReturn3('Shubham', 23));
-
-//Fourth Method
-const objReturn4 = (name, age) => ({ name, age });
-
-console.log(objReturn4('John Cena', 46));
+voterAgeValidation(prompt('What is your Age?'));
