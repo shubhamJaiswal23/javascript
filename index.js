@@ -1,22 +1,21 @@
-//Contructor function
-function Person(firstName, lastName, age) {
+//Prototypes in JavaScript
+function User(firstName, lastName, age) {
   this.firstName = firstName;
   this.lastName = lastName;
   this.age = age;
-  this.intro = function () {
-    return `Hello, my name is ${this.firstName} ${this.lastName}, and I'm ${this.age} years old.`;
-  };
 }
 
-//Instantiate the Object
-const person1 = new Person('Shubham', 'Jaiswal', 23);
-const person2 = new Person('Anant', 'Chauhan', 25);
-const person3 = new Person('Shivam', 'Agarwal', 23);
+//instantiate the Object using User Contructor function
+const user1 = new User('John', 'Doe', 45);
 
-// console.log(person1.intro());
-// console.log(person2.intro());
-// console.log(person3.intro());
+//Add a Method to User Constructor function
+User.prototype.intro = function () {
+  return `Hello, my name is ${this.firstName} ${this.lastName}`;
+};
 
-// console.log(person1.constructor);
+// console.log(user1.intro());
 
-// console.log(person1 instanceof Person);
+//Add a property to User Constructor function
+User.prototype.nationality = 'American';
+
+// console.log(user1.nationality);
