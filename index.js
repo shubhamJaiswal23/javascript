@@ -1,38 +1,22 @@
-//Fetch options
-// function createPost(post) {
-//   fetch('https://jsonplaceholder.typicode.com/posts', {
-//     method: 'POST',
-//     body: JSON.stringify({
-//       title: post.title,
-//       body: post.body
-//     }),
-//     headers: {
-//       'Content-Type': 'application/json',
-//       token: 'WORD@$7X'
-//     }
-//   })
-//     .then((res) => res.json())
-//     .then((data) => console.log(data));
-// }
+//Contructor function
+function Person(firstName, lastName, age) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.age = age;
+  this.intro = function () {
+    return `Hello, my name is ${this.firstName} ${this.lastName}, and I'm ${this.age} years old.`;
+  };
+}
 
-// createPost({ title: 'Post-1', body: 'This is the body of Post-1' });
+//Instantiate the Object
+const person1 = new Person('Shubham', 'Jaiswal', 23);
+const person2 = new Person('Anant', 'Chauhan', 25);
+const person3 = new Person('Shivam', 'Agarwal', 23);
 
-const sendDataToServer = (post) => {
-  fetch('https://jsonplaceholder.typicode.com/posts', {
-    method: 'POST',
-    body: JSON.stringify({
-      title: post.title,
-      body: post.body
-    }),
-    headers: {
-      'Content-Type': 'application/json',
-      token: 'Haridwar024'
-    }
-  })
-    .then((res) => {
-      return res.json();
-    })
-    .then((data) => console.log(data));
-};
+// console.log(person1.intro());
+// console.log(person2.intro());
+// console.log(person3.intro());
 
-sendDataToServer({ title: 'Day-11', body: 'Daily Progess Update' });
+// console.log(person1.constructor);
+
+// console.log(person1 instanceof Person);
