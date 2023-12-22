@@ -1,21 +1,32 @@
-//Prototypes in JavaScript
-function User(firstName, lastName, age) {
-  this.firstName = firstName;
-  this.lastName = lastName;
-  this.age = age;
+//Classes in JavaScript
+//Class syntax:->
+
+//class ClassName{
+// constructor() {...}
+// method1() {...}
+// method2() {...}
+// method3() {...}
+// }
+
+class User {
+  constructor(firstName, lastName, age, uid) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+    this.uid = uid;
+  }
+
+  userInfo() {
+    return `Hello, my name is ${this.firstName} ${this.lastName}.`;
+  }
+
+  userId() {
+    return `${this.firstName} ${this.lastName} user-id is ${this.uid}.`;
+  }
 }
 
-//instantiate the Object using User Contructor function
-const user1 = new User('John', 'Doe', 45);
+//Instantiating the user object using User Class
+// const user1 = new User('John', 'Doe', 45, 100);
 
-//Add a Method to User Constructor function
-User.prototype.intro = function () {
-  return `Hello, my name is ${this.firstName} ${this.lastName}`;
-};
-
-// console.log(user1.intro());
-
-//Add a property to User Constructor function
-User.prototype.nationality = 'American';
-
-// console.log(user1.nationality);
+// console.log(user1.userInfo());
+// console.log(user1.userId());
